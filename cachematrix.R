@@ -29,7 +29,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ###  x         the matrix that we want to get its inverse
 
 
-cacheSolve <- function(x.cache,x, ...) {
+cacheSolve <- function(x.cache,x) {
         i <- x.cache$getinverse()
         # if the matrix x hasn't changed and the inverse has already been calculated,
         # retrieve the inverse from the cache
@@ -42,7 +42,7 @@ cacheSolve <- function(x.cache,x, ...) {
         # or if the matrix x has changed, calcuate the inverse of the matrix x and cache its inverse.
         x.cache$set(x)
         data <- x.cache$get()
-        i <- solve(data, ...)
+        i <- solve(data)
         x.cache$setinverse(i)
         i
 }
