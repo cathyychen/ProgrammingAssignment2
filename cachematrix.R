@@ -34,7 +34,7 @@ cacheSolve <- function(x.cache,x) {
         
         # if the matrix x hasn't changed and the inverse has already been calculated,
         # retrieve the inverse from the cache
-        if (x.cache$get()==x &&!is.null(i)) {
+        if (x.cache$get()==x && !is.null(i)) {
                 message("getting cached inverse")
                 return(i)
         }
